@@ -1,0 +1,299 @@
+/* Стили для страницы регистрации */
+
+/* Шапка для страницы регистрации */
+.header {
+    position: relative;
+    padding: 40px 0 20px 0;
+    height: 100px;
+    border-bottom: 1px solid #f0f0f0;
+}
+
+.back-link {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    text-decoration: none;
+    padding: 0 100px;
+}
+
+.arrow {
+    width: 52px;
+    height: 2px;
+    background: #000000;
+    position: relative;
+}
+
+.arrow::before {
+    content: '';
+    position: absolute;
+    left: -5px;
+    top: -3px;
+    width: 10px;
+    height: 10px;
+    border-left: 2px solid #000000;
+    border-bottom: 2px solid #000000;
+    transform: rotate(45deg);
+}
+
+.back-text {
+    font-family: 'Inknut Antiqua', serif;
+    font-size: 20px;
+    letter-spacing: 1.5em;
+    text-transform: uppercase;
+    color: #000000;
+}
+
+/* Основной контент регистрации */
+.register-main {
+    position: relative;
+    min-height: calc(100vh - 100px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #FFFFFF;
+}
+
+.register-container {
+    display: grid;
+    grid-template-columns: 1fr auto 1fr;
+    gap: 40px;
+    align-items: center;
+    max-width: 1400px;
+    width: 100%;
+    padding: 0 100px;
+}
+
+/* Изображения */
+.image-left,
+.image-right {
+    width: 100%;
+    max-width: 500px;
+}
+
+.image-left img,
+.image-right img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+}
+
+.image-left img {
+    height: 679px;
+}
+
+.image-right img {
+    height: 585px;
+}
+
+/* Форма регистрации */
+.register-form {
+    position: relative;
+    min-width: 400px;
+    border-radius: 155px;
+    overflow: hidden;
+    transform: rotate(0.16deg);
+}
+
+.form-bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+}
+
+.form-bg img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.form-content {
+    position: relative;
+    z-index: 2;
+    padding: 40px;
+    background: rgba(255, 255, 255, 0.1);
+}
+
+.form-header {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.logo-z {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.logo-z img {
+    width: 102px;
+    height: 102px;
+    object-fit: contain;
+}
+
+.form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    align-items: flex-start; 
+}
+
+.input-group {
+    position: relative;
+    width: 356px; 
+}
+
+.form-input {
+    width: 100%;
+    height: 58px;
+    border: none;
+    background: transparent;
+    font-family: 'Abhaya Libre Medium', serif;
+    font-size: 32px;
+    color: #000000;
+    opacity: 0.5;
+    text-align: left; 
+    padding: 0 20px;
+    position: relative;
+    z-index: 2;
+    direction: ltr; 
+}
+
+.form-input::placeholder {
+    text-align: left; 
+    color: #000000;
+    opacity: 0.5;
+}
+
+.form-input:focus {
+    outline: none;
+    opacity: 1;
+}
+
+.input-bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #FFFFFF;
+    opacity: 0.3;
+    z-index: 1;
+    pointer-events: none;
+}
+
+.register-btn {
+    width: 356px;
+    height: 102px;
+    background: #000000;
+    border: none;
+    border-radius: 20px;
+    font-family: 'Abhaya Libre Medium', serif;
+    font-size: 20px;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    color: #FFFFFF;
+    cursor: pointer;
+    margin-top: 20px;
+    align-self: flex-start;
+}
+
+.user-agreement {
+    font-family: 'Abhaya Libre Medium', serif;
+    font-size: 20px;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: #000000;
+    text-align: center;
+    margin-top: 30px;
+    cursor: pointer;
+    width: 100%;
+}
+
+/* Адаптация для планшетов */
+@media (max-width: 1200px) {
+    .register-container {
+        grid-template-columns: 1fr;
+        gap: 30px;
+        padding: 0 50px;
+    }
+
+    .image-left,
+    .image-right {
+        display: none;
+    }
+
+    .register-form {
+        min-width: 350px;
+        margin: 0 auto;
+    }
+}
+
+/* Адаптация для мобильных */
+@media (max-width: 767px) {
+    .header {
+        padding: 30px 0 15px 0;
+        height: 80px;
+    }
+
+    .back-link {
+        padding: 0 20px;
+        gap: 10px;
+    }
+
+    .back-text {
+        font-size: 16px;
+        letter-spacing: 1em;
+    }
+
+    .arrow {
+        width: 40px;
+    }
+
+    .register-container {
+        padding: 0 20px;
+    }
+
+    .register-form {
+        min-width: auto;
+        border-radius: 80px;
+    }
+
+    .form-content {
+        padding: 30px 20px;
+    }
+
+    .input-group {
+        width: 100%;
+    }
+
+    .logo-z img {
+        width: 80px;
+        height: 80px;
+    }
+
+    .form-input {
+        font-size: 24px;
+        height: 50px;
+    }
+
+    .register-btn {
+        width: 100%;
+        height: 80px;
+        font-size: 18px;
+    }
+
+    .user-agreement {
+        font-size: 16px;
+    }
+}
+
+/* Десктопная версия */
+@media (min-width: 1700px) {
+    .register-container {
+        max-width: 1600px;
+    }
+}
